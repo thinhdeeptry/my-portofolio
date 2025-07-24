@@ -23,6 +23,9 @@ interface TextTypeProps {
   onSentenceComplete?: (sentence: string, index: number) => void;
   startOnVisible?: boolean;
   reverseMode?: boolean;
+  enableGradient?: boolean;
+  gradientColors?: string[];
+  gradientAnimationSpeed?: number;
 }
 
 const TextType = ({
@@ -44,6 +47,9 @@ const TextType = ({
   onSentenceComplete,
   startOnVisible = false,
   reverseMode = false,
+  enableGradient = false,
+  gradientColors = ["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"],
+  gradientAnimationSpeed = 8,
   ...props
 }: TextTypeProps & React.HTMLAttributes<HTMLElement>) => {
   const [displayedText, setDisplayedText] = useState("");
@@ -53,6 +59,7 @@ const TextType = ({
   const [isVisible, setIsVisible] = useState(!startOnVisible);
   const cursorRef = useRef<HTMLSpanElement>(null);
   const containerRef = useRef<HTMLElement>(null);
+  const textContentRef = useRef<HTMLSpanElement>(null);
 
   const textArray = Array.isArray(text) ? text : [text];
 
@@ -171,6 +178,37 @@ const TextType = ({
     onSentenceComplete,
   ]);
 
+  useEffect(() => {
+    if (!enableGradient || !textContentRef.current) return;
+
+    // Thiết lập CSS cho gradient text
+    const gradientStyle = {
+      backgroundImage: `linear-gradient(to right, ${gradientColors.join(", ")})`,
+      backgroundSize: "300% 100%",
+      backgroundClip: "text",
+      WebkitBackgroundClip: "text",
+      color: "transparent",
+      animation: `gradient ${gradientAnimationSpeed}s linear infinite`,
+    };
+
+    // Áp dụng style
+    Object.assign(textContentRef.current.style, gradientStyle);
+
+    // Thêm keyframes nếu chưa có
+    if (!document.querySelector("#gradient-keyframes")) {
+      const styleSheet = document.createElement("style");
+      styleSheet.id = "gradient-keyframes";
+      styleSheet.textContent = `
+        @keyframes gradient {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+      `;
+      document.head.appendChild(styleSheet);
+    }
+  }, [enableGradient, gradientColors, gradientAnimationSpeed]);
+
   const shouldHideCursor =
     hideCursorWhileTyping &&
     (currentCharIndex < textArray[currentTextIndex].length || isDeleting);
@@ -183,15 +221,21 @@ const TextType = ({
       ...props,
     },
     <span
-      className="text-type__content"
-      style={{ color: getCurrentTextColor() }}
+      ref={textContentRef}
+      className={`text-type__content ${
+        enableGradient ? "gradient-text" : ""
+      }`}
+      style={enableGradient ? {} : { color: getCurrentTextColor() }}
     >
       {displayedText}
     </span>,
     showCursor && (
       <span
         ref={cursorRef}
-        className={`text-type__cursor ${cursorClassName} ${shouldHideCursor ? "text-type__cursor--hidden" : ""}`}
+        className={`text-type__cursor ${cursorClassName} ${
+          shouldHideCursor ? "text-type__cursor--hidden" : ""
+        }`}
+        style={enableGradient ? { color: gradientColors[0] } : {}}
       >
         {cursorCharacter}
       </span>

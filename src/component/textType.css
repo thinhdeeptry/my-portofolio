@@ -1,6 +1,17 @@
 .text-type {
   display: inline-block;
   white-space: pre-wrap;
+
+}
+
+.text-type__content {
+  display: inline-block;
+}
+
+.text-type__content.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .text-type__cursor {
