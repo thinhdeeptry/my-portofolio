@@ -122,10 +122,11 @@ const Particles: React.FC<ParticlesProps> = ({
     camera.position.set(0, 0, cameraDistance);
 
     const resize = () => {
-      const width = container.clientWidth;
-      const height = container.clientHeight;
+      // Sử dụng window dimensions thay vì container dimensions
+      const width = window.innerWidth;
+      const height = window.innerHeight;
       renderer.setSize(width, height);
-      camera.perspective({ aspect: gl.canvas.width / gl.canvas.height });
+      camera.perspective({ aspect: width / height });
     };
     window.addEventListener("resize", resize, false);
     resize();
