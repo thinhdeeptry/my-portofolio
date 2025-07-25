@@ -18,6 +18,12 @@ interface AnimatedContentProps {
   threshold?: number;
   delay?: number;
   onComplete?: () => void;
+  startPosition?: string; // Thêm prop mới để điều chỉnh vị trí bắt đầu
+  endPosition?: string;   // Thêm prop để điều chỉnh vị trí kết thúc
+  scrub?: boolean|number;        // Thêm prop để kích hoạt chế độ scrub
+  markers?: boolean;      // Thêm prop để hiển thị markers (hữu ích khi debug)
+  repeatAnimation?: boolean; // Điều khiển xem animation có lặp lại khi scroll lên xuống không
+  toggleActions?: string;    // Điều khiển hành vi khi scroll
 }
 
 const AnimatedContent: React.FC<AnimatedContentProps> = ({
@@ -33,6 +39,12 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
   threshold = 0.1,
   delay = 0,
   onComplete,
+  startPosition = "top bottom", // Mặc định: khi phần trên của element chạm bottom viewport
+  endPosition = "top center",   // Mặc định: khi phần trên của element chạm center viewport
+  scrub = false,                // Mặc định: không scrub
+  markers = false,              // Mặc định: không hiển thị markers
+  toggleActions = "play none none none", // Default value
+  repeatAnimation = false,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -42,7 +54,6 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
 
     const axis = direction === "horizontal" ? "x" : "y";
     const offset = reverse ? -distance : distance;
-    const startPct = (1 - threshold) * 100;
 
     gsap.set(el, {
       [axis]: offset,
@@ -50,20 +61,27 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
       opacity: animateOpacity ? initialOpacity : 1,
     });
 
-    gsap.to(el, {
+    // Thiết lập ScrollTrigger với toggleActions
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: el,
+        start: startPosition,
+        end: endPosition,
+        scrub: scrub,
+        markers: false,
+        toggleActions: toggleActions, // Sử dụng giá trị được truyền vào
+        once: !repeatAnimation, // Chỉ chạy một lần nếu repeatAnimation = false
+      }
+    });
+
+    tl.to(el, {
       [axis]: 0,
       scale: 1,
       opacity: 1,
       duration,
       ease,
-      delay,
+      delay: scrub ? 0 : delay,
       onComplete,
-      scrollTrigger: {
-        trigger: el,
-        start: `top ${startPct}%`,
-        toggleActions: "play none none none",
-        once: true,
-      },
     });
 
     return () => {
@@ -82,6 +100,12 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
     threshold,
     delay,
     onComplete,
+    startPosition,
+    endPosition,
+    scrub,
+    markers,
+    toggleActions,
+    repeatAnimation,
   ]);
 
   return <div ref={ref}>{children}</div>;
