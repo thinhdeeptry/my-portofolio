@@ -12,6 +12,7 @@ import TargetCursor from "@/component/TargetCursor";
 import Image from "next/image";
 import TiltedCard from "@/component/GlareHover";
 import GlareHover from "@/component/GlareHover";
+import StatsSection from "@/component/StatsSection";
 
 export default function Home() {
   return (
@@ -151,7 +152,7 @@ export default function Home() {
           </div>
           {/* about me */}
           <div className="w-full overflow-hidden h-auto py-20 bg-gradient-to-b from-black to-gray-900/20">
-            <div className="container mx-auto px-8 lg:px-32">
+            <div className="container mx-auto px-8">
               <div className="flex justify-center flex-col items-center">
                 <AnimatedContent
                   distance={100}
@@ -286,7 +287,10 @@ export default function Home() {
                 </AnimatedContent>
               </div>
             </div>
+            <StatsSection />
           </div>
+
+          
         </div>
 
         {/* Mobile layout */}
