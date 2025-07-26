@@ -8,7 +8,7 @@ const StatsSection: React.FC = () => {
   return (
     <div className="w-full py-16 bg-gray-950/50">
       <div className="container mx-auto px-8 lg:px-32">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <AnimatedContent
             distance={50}
             direction="vertical"
@@ -32,7 +32,7 @@ const StatsSection: React.FC = () => {
             />
           </AnimatedContent>
 
-          <AnimatedContent
+          {/* <AnimatedContent
             distance={50}
             direction="vertical"
             reverse={true}
@@ -53,7 +53,7 @@ const StatsSection: React.FC = () => {
               subtitle="Professional skills validated"
               link="/certificates"
             />
-          </AnimatedContent>
+          </AnimatedContent> */}
 
           <AnimatedContent
             distance={50}
@@ -65,7 +65,7 @@ const StatsSection: React.FC = () => {
             scale={0.95}
             startPosition="top 85%"
             scrub={false}
-            delay={0.5}
+            delay={0.3}
             toggleActions="play none none reverse"
             repeatAnimation={true}
           >

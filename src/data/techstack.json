@@ -1,0 +1,130 @@
+[
+  {
+    "id": "html",
+    "name": "HTML",
+    "iconUrl": "/techIcon/html5.svg",
+    "color":"#E34F26",
+    "category": "frontend",
+    "proficiency": "expert"
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript",
+    "iconUrl": "/techIcon/javascript.svg",
+    "color":"#F7DF1E",
+    "category": "frontend",
+    "proficiency": "expert"
+  },
+  {
+    "id": "typescript",
+    "name": "Typescript",
+    "iconUrl": "/techIcon/typescript.svg",
+    "color":"#3178C6",
+    "category": "frontend",
+    "proficiency": "expert"
+  },
+  {
+    "id": "nodedotjs",
+    "name": "NodeJs",
+    "iconUrl": "/techIcon/nodedotjs.svg",
+    "color":"#5FA04E",
+    "category": "backend",
+    "proficiency": "expert"
+  },
+  {
+    "id": "express",
+    "name": "ExpressJs",
+    "iconUrl": "/techIcon/express.svg",
+    "color":"#000000",
+    "category": "backend",
+    "proficiency": "expert"
+  },
+  {
+    "id": "nestjs",
+    "name": "NestJs",
+    "iconUrl": "/techIcon/nestjs.svg",
+    "color":"#E0234E",
+    "category": "backend",
+    "proficiency": "expert"
+  },
+  {
+    "id": "nextdotjs",
+    "name": "NextJs",
+    "iconUrl": "/techIcon/nextdotjs.svg",
+    "color":"#000000",
+    "category": "frontend",
+    "proficiency": "advanced"
+  },
+  {
+    "id": "tailwindcss",
+    "name": "Tailwind CSS",
+    "iconUrl": "/techIcon/tailwindcss.svg",
+    "color":"#06B6D4",
+    "category": "frontend",
+    "proficiency": "advanced"
+  },
+  {
+    "id": "reactjs",
+    "name": "ReactJS",
+    "iconUrl": "/techIcon/react.svg",
+    "color":"#61DAFB",
+    "category": "frontend",
+    "proficiency": "advanced"
+  },
+  {
+    "id": "socketdotio",
+    "name": "Socket.IO",
+    "iconUrl": "/techIcon/socketdotio.svg",
+    "color":"#010101",
+    "category": "backend",
+    "proficiency": "intermediate"
+  },
+  {
+    "id": "mongodb",
+    "name": "MongoDB",
+    "iconUrl": "/techIcon/mongodb.svg",
+    "color":"#47A248",
+    "category": "backend",
+    "proficiency": "advanced"
+  },
+  {
+    "id": "mysql",
+    "name": "MySQL",
+    "iconUrl": "/techIcon/mysql.svg",
+    "color":"#4479A1",
+    "category": "backend",
+    "proficiency": "advanced"
+  },
+  {
+    "id": "postgresql",
+    "name": "PostgreSQL",
+    "iconUrl": "/techIcon/postgresql.svg",
+    "color":"#4169E1",
+    "category": "backend",
+    "proficiency": "intermediate"
+  },
+  {
+    "id": "redis",
+    "name": "Redis",
+    "iconUrl": "/techIcon/redis.svg",
+    "color":"#FF4438",
+    "category": "backend",
+    "proficiency": "intermediate"
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "iconUrl": "/techIcon/docker.svg",
+    "color":"#2496ED",
+    "category": "devops",
+    "proficiency": "intermediate"
+  },
+  {
+    "id": "kong",
+    "name": "kong",
+    "iconUrl": "/techIcon/kong.svg",
+    "color":"#003459",
+    "category": "devops",
+    "proficiency": "intermediate"
+  }
+]

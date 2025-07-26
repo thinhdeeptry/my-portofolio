@@ -13,6 +13,7 @@ import Image from "next/image";
 import TiltedCard from "@/component/GlareHover";
 import GlareHover from "@/component/GlareHover";
 import StatsSection from "@/component/StatsSection";
+import PortfolioShowcase from "@/component/portfolio/PortfolioShowcase";
 
 export default function Home() {
   return (
@@ -288,6 +289,7 @@ export default function Home() {
               </div>
             </div>
             <StatsSection />
+            <PortfolioShowcase />
           </div>
 
           

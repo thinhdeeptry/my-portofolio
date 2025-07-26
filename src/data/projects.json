@@ -1,0 +1,32 @@
+[
+  {
+    "id": "aritmatika-solver",
+    "title": "Aritmatika Solver",
+    "description": "Program ini dirancang untuk mempermudah pengguna dalam menyelesaikan soal-soal matematika dasar dengan cepat dan efisien.",
+    "imageUrl": "/projects/aritmatika-solver.png",
+    "liveUrl": "https://example.com/aritmatika-solver",
+    "detailsUrl": "/projects/aritmatika-solver",
+    "technologies": ["JavaScript", "HTML", "CSS"],
+    "featured": true
+  },
+  {
+    "id": "autochat-discord",
+    "title": "AutoChat-Discord",
+    "description": "AutoChat adalah solusi otomatisasi untuk mengirim pesan ke saluran Discord secara terjadwal dengan berbagai fitur kustomisasi.",
+    "imageUrl": "/projects/autochat-discord.png",
+    "liveUrl": "https://example.com/autochat-discord",
+    "detailsUrl": "/projects/autochat-discord",
+    "technologies": ["Node.js", "Discord.js", "React"],
+    "featured": true
+  },
+  {
+    "id": "buku-catatan",
+    "title": "Buku Catatan",
+    "description": "Buku Catatan adalah website yang memungkinkan pengguna untuk membuat, menyimpan, dan mengelola catatan pribadi dengan antarmuka yang sederhana.",
+    "imageUrl": "/projects/buku-catatan.png",
+    "liveUrl": "https://example.com/buku-catatan",
+    "detailsUrl": "/projects/buku-catatan",
+    "technologies": ["React", "Firebase", "CSS"],
+    "featured": false
+  }
+]
