@@ -511,7 +511,7 @@ const ContactMe: React.FC = () => {
               ) : (
                 <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
                   {/* Comments List */}
-                  <div className="space-y-4 h-[352px] overflow-y-auto pr-2 custom-scrollbar">
+                  <div className="space-y-4 h-[352px] overflow-y-auto pr-2 custom-scrollbar modern-scrollbar">
                     
 
                     {/* Comments List */}

@@ -225,7 +225,7 @@ export default function Home() {
 
                     </p>
 
-                    <div className="bg-gray-900/70 rounded-xl p-6 border border-indigo-500/30 mb-8">
+                    <div className="cursor-target bg-gray-900/70 rounded-xl p-6 border border-indigo-500/30 mb-8">
                       <p className="text-indigo-300 italic text-lg">
                         "Leveraging AI as a professional tool, not a replacement."
                       </p>

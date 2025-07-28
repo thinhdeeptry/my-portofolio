@@ -3,8 +3,10 @@
 import React from 'react';
 import StatsCard from './StatsCard';
 import AnimatedContent from './AnimatedContent';
+import { useProjects } from '@/hooks/useProjects';
 
 const StatsSection: React.FC = () => {
+  const { projects, isLoading, error } = useProjects();
   return (
     <div className="w-full py-16 bg-gray-950/50">
       <div className="container mx-auto px-8 lg:px-32">
@@ -25,7 +27,7 @@ const StatsSection: React.FC = () => {
           >
             <StatsCard
               icon="code"
-              number={2}
+              number={projects.length}
               title="TOTAL PROJECTS"
               subtitle="Innovative web solutions crafted"
               link="/projects"

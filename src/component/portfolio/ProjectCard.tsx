@@ -9,7 +9,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="bg-gray-900/70 rounded-2xl overflow-hidden h-full flex flex-col">
+    <div className="cursor-target bg-gray-900/70 rounded-2xl overflow-hidden h-full flex flex-col">
       <div className="relative aspect-video overflow-hidden">
         <Image
           src={project.imageUrl}
