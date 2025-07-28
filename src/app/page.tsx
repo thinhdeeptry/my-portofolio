@@ -14,6 +14,7 @@ import TiltedCard from "@/component/GlareHover";
 import GlareHover from "@/component/GlareHover";
 import StatsSection from "@/component/StatsSection";
 import PortfolioShowcase from "@/component/portfolio/PortfolioShowcase";
+import ContactMe from "@/component/ContactMe";
 
 export default function Home() {
   return (
@@ -29,10 +30,6 @@ export default function Home() {
           alphaParticles={false}
           disableRotation={false}
           className="pointer-events-auto"
-        />
-        <TargetCursor
-          spinDuration={2}
-          hideDefaultCursor={true}
         />
       </div>
       <div className="relative z-10 w-full min-h-screen mt-28">
@@ -152,7 +149,7 @@ export default function Home() {
             </div>
           </div>
           {/* about me */}
-          <div className="w-full overflow-hidden h-auto py-20 bg-gradient-to-b from-black to-gray-900/20">
+          <div className="w-full overflow-hidden h-auto py-20 bg-gradient-to-b from-gray-900/20 to-black">
             <div className="container mx-auto px-8">
               <div className="flex justify-center flex-col items-center">
                 <AnimatedContent
@@ -290,6 +287,7 @@ export default function Home() {
             </div>
             <StatsSection />
             <PortfolioShowcase />
+            <ContactMe/>
           </div>
 
           

@@ -11,7 +11,7 @@ const PortfolioShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'projects' | 'certificates' | 'techstack'>('projects');
 
   return (
-    <div className="w-full overflow-hidden py-24 bg-gradient-to-b from-black to-gray-900/30">
+    <div className="w-full overflow-hidden py-24 bg-gradient-to-b from-gray-900/20 to-black">
       <div className="container mx-auto px-8 lg:px-32">
         <AnimatedContent
           distance={50}
