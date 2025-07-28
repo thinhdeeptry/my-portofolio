@@ -74,26 +74,42 @@ const ContactMe: React.FC = () => {
     }))
   }
 
+  // Cập nhật hàm handleSubmit
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     setFormStatus({ type: null, message: "" })
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000))
-      console.log("Form submitted:", formData)
+      // Gửi dữ liệu form đến API endpoint
+      const response = await fetch('/api/send-message', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      // Hiển thị thông báo thành công
       setFormStatus({
         type: "success",
         message: "Message sent successfully! I'll get back to you soon.",
       })
 
+      // Reset form
       setFormData({
         name: "",
         email: "",
         message: "",
       })
     } catch (error) {
+      console.error('Error submitting form:', error);
       setFormStatus({
         type: "error",
         message: "An error occurred. Please try again later.",
