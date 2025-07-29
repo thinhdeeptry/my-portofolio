@@ -145,7 +145,7 @@ export default function Home() {
             </div>
           </div>
           {/* about me */}
-          <div id = "about" className="w-full overflow-hidden h-auto py-20 bg-gradient-to-b from-gray-900/20 to-black">
+          <div id="about" className="w-full overflow-hidden h-auto py-20 bg-gradient-to-b from-gray-900/20 to-black">
             <div className="container mx-auto px-8">
               <div className="flex justify-center flex-col items-center">
                 <AnimatedContent
@@ -260,22 +260,24 @@ export default function Home() {
                 >
                   <div className="flex-shrink-0 ml-auto">
                     <GlareHover
-                    glareColor="#ffffff"
-                    glareOpacity={0.3}
-                    glareAngle={-30}
-                    glareSize={300}
-                    transitionDuration={800}
-                    playOnce={false}
-                    borderRadius="9999px"
-                    className="w-full h-full rounded-full"
-                  >
-                    <div className="cursor-target rounded-full border-4 border-indigo-500/40 overflow-hidden w-72 h-72 bg-gradient-to-br from-indigo-600/20 to-violet-600/20 p-1">
-                      <Image
-                        src={'/avatar.png'}
-                        alt="Profile"
-                        className="rounded-full object-cover w-full h-full"
-                      />
-                    </div>
+                      glareColor="#ffffff"
+                      glareOpacity={0.3}
+                      glareAngle={-30}
+                      glareSize={300}
+                      transitionDuration={800}
+                      playOnce={false}
+                      borderRadius="9999px"
+                      className="w-full h-full rounded-full"
+                    >
+                      <div className="cursor-target rounded-full border-4 border-indigo-500/40 overflow-hidden w-72 h-72 bg-gradient-to-br from-indigo-600/20 to-violet-600/20 p-1">
+                        <Image
+                          width={30}
+                          height={500}
+                          src={'/avatar.png'}
+                          alt="Profile"
+                          className="rounded-full object-cover w-full h-full"
+                        />
+                      </div>
                     </GlareHover>
                   </div>
                 </AnimatedContent>
@@ -283,10 +285,10 @@ export default function Home() {
             </div>
             <StatsSection />
             <PortfolioShowcase />
-            <ContactMe/>
+            <ContactMe />
           </div>
 
-          
+
         </div>
 
         {/* Mobile layout */}

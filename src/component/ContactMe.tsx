@@ -3,7 +3,7 @@ import type React from "react"
 import { useState } from "react"
 import { Mail, Send, Github, Linkedin, CheckCircle, AlertCircle, User, MessageSquare, Upload, Pin, Facebook } from "lucide-react"
 import AnimatedContent from "./AnimatedContent"
-import { useComments} from "@/hooks/useComments"
+import { useComments } from "@/hooks/useComments"
 import Image from "next/image"
 
 interface FormData {
@@ -328,8 +328,8 @@ const ContactMe: React.FC = () => {
                   {formStatus.type && (
                     <div
                       className={`flex items-center gap-3 p-4 rounded-xl ${formStatus.type === "success"
-                          ? "bg-green-900/30 border border-green-500/30 text-green-300"
-                          : "bg-red-900/30 border border-red-500/30 text-red-300"
+                        ? "bg-green-900/30 border border-green-500/30 text-green-300"
+                        : "bg-red-900/30 border border-red-500/30 text-red-300"
                         }`}
                     >
                       {formStatus.type === "success" ? <CheckCircle size={20} /> : <AlertCircle size={20} />}
@@ -468,8 +468,8 @@ const ContactMe: React.FC = () => {
                 {commentStatus.type && (
                   <div
                     className={`flex items-center gap-3 p-4 rounded-xl ${commentStatus.type === "success"
-                        ? "bg-green-900/30 border border-green-500/30 text-green-300"
-                        : "bg-red-900/30 border border-red-500/30 text-red-300"
+                      ? "bg-green-900/30 border border-green-500/30 text-green-300"
+                      : "bg-red-900/30 border border-red-500/30 text-red-300"
                       }`}
                   >
                     {commentStatus.type === "success" ? <CheckCircle size={20} /> : <AlertCircle size={20} />}
@@ -513,7 +513,7 @@ const ContactMe: React.FC = () => {
                 <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
                   {/* Comments List */}
                   <div className="space-y-4 h-[352px] overflow-y-auto pr-2 custom-scrollbar modern-scrollbar">
-                    
+
 
                     {/* Comments List */}
                     {comments.length > 0 ? (
@@ -526,9 +526,11 @@ const ContactMe: React.FC = () => {
                               key={comment.id}
                               className="flex gap-4 p-4 bg-gray-800/50 border border-purple-500/20 rounded-xl"
                             >
-                              
+
                               <div className="flex-shrink-0">
                                 <Image
+                                  height={40}
+                                  width={40}
                                   src={comment.avatar_url || "/placeholder.svg?height=40&width=40"}
                                   alt={comment.author}
                                   className="w-10 h-10 rounded-full object-cover"
@@ -558,6 +560,8 @@ const ContactMe: React.FC = () => {
                             >
                               <div className="flex-shrink-0">
                                 <Image
+                                  width={40}
+                                  height={40}
                                   src={comment.avatar_url || "/placeholder.svg?height=40&width=40"}
                                   alt={comment.author}
                                   className="w-10 h-10 rounded-full object-cover"

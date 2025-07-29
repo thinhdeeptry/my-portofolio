@@ -207,6 +207,102 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
     }
   };
 
+  // Thêm hàm handleScroll để cập nhật active state khi scroll
+  useEffect(() => {
+    // Hàm xác định section hiện tại đang hiển thị trên màn hình
+    const handleScroll = () => {
+      if (typeof window === 'undefined') return;
+
+      // Tạo mảng của các section cần theo dõi
+      const sections = items.map(item => {
+        const id = item.href.replace('/', '');
+        if (!id) return { id: 'home', element: document.body, href: '/' };
+        return { id, element: document.getElementById(id), href: item.href };
+      }).filter(item => item.element);
+
+      // Tính toán section nào đang hiển thị nhiều nhất trên màn hình
+      const viewportHeight = window.innerHeight;
+      let maxVisibleSection = { id: 'home', index: 0, visibleHeight: 0 };
+
+      sections.forEach((section, index) => {
+        if (!section.element) return;
+
+        const rect = section.element.getBoundingClientRect();
+
+        // Tính toán phần hiển thị trong viewport
+        const visibleTop = Math.max(0, rect.top);
+        const visibleBottom = Math.min(viewportHeight, rect.bottom);
+        const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+
+        // Nếu section này hiển thị nhiều hơn section trước đó
+        if (visibleHeight > maxVisibleSection.visibleHeight) {
+          maxVisibleSection = {
+            id: section.id,
+            index,
+            visibleHeight
+          };
+        }
+
+        // Trường hợp đặc biệt - nếu đầu section đã đạt đến đỉnh viewport
+        if (rect.top <= 100 && rect.bottom >= viewportHeight / 2) {
+          maxVisibleSection = {
+            id: section.id,
+            index,
+            visibleHeight: Infinity  // Ưu tiên cao nhất
+          };
+        }
+      });
+
+      // Nếu section active khác với hiện tại, cập nhật active
+      if (maxVisibleSection.index !== activeIndex) {
+        setActiveIndex(maxVisibleSection.index);
+
+        // Cập nhật hiệu ứng
+        const currentItem = navRef.current?.querySelectorAll('li')[maxVisibleSection.index] as HTMLElement;
+        if (currentItem) {
+          updateEffectPosition(currentItem);
+
+          // Cập nhật các hiệu ứng khác nếu cần
+          if (textRef.current) {
+            textRef.current.classList.remove("active");
+            void textRef.current.offsetWidth;
+            textRef.current.classList.add("active");
+          }
+
+          // Không tạo particles khi scroll để tránh quá nhiều hiệu ứng
+          // if (filterRef.current) {
+          //   makeParticles(filterRef.current);
+          // }
+        }
+      }
+    };
+
+    // Thêm event listener
+    window.addEventListener('scroll', debounce(handleScroll, 100));
+
+    // Clean up
+    return () => {
+      window.removeEventListener('scroll', debounce(handleScroll, 100));
+    };
+  }, [items, activeIndex]); // Chạy lại khi items hoặc activeIndex thay đổi
+
+  // Thêm hàm debounce để tối ưu hiệu suất
+  function debounce<T extends (...args: any[]) => any>(
+    func: T,
+    wait: number
+  ): (...args: Parameters<T>) => void {
+    let timeout: ReturnType<typeof setTimeout> | null = null;
+
+    return function (...args: Parameters<T>) {
+      const later = () => {
+        timeout = null;
+        func(...args);
+      };
+
+      if (timeout) clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
 
   return (
     <>
