@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import SectionTabs from './SectionTabs';
 import ProjectsSection from './ProjectsSection';
-import CertificatesSection from './CertificatesSection';
 import TechStackSection from './TechStackSection';
 import AnimatedContent from '../AnimatedContent';
 

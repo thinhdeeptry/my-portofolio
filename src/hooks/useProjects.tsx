@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Project, Certificate, TechStack } from '@/types/types';
+import { Project, Certificate, TechStack, RawTechStack } from '@/types/types';
 
 // Projects hook
 export function useProjects() {
@@ -12,7 +12,12 @@ export function useProjects() {
       try {
         // Option 1: Fetch from local data
         const data = await import('@/data/projects.json');
-        setProjects(data.default);
+        setProjects(
+          data.default.map((project: Project) => ({
+            ...project,
+            detailsUrl: project.detailsUrl ?? '', // Provide a default or computed value if missing
+          }))
+        );
 
         // Option 2: Fetch from API
         // const response = await fetch('/api/projects');
@@ -73,15 +78,24 @@ export function useTechStack() {
   useEffect(() => {
     async function fetchTechStack() {
       try {
-        // Option 1: Fetch from local data
+        // Fetch from local data
         const data = await import('@/data/techstack.json');
-        setTechStack(
-          data.default.map((item: any) => ({
+        
+        // Validate and convert each item
+        const validTechStack = data.default.map((item: RawTechStack) => {
+          // Validate category
+          const validCategory = validateCategory(item.category);
+          // Validate proficiency
+          const validProficiency = validateProficiency(item.proficiency);
+          
+          return {
             ...item,
-            category: item.category as TechStack['category'],
-          }))
-        );
-
+            category: validCategory,
+            proficiency: validProficiency
+          } as TechStack;
+        });
+        
+        setTechStack(validTechStack);
         setIsLoading(false);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to load tech stack'));
@@ -93,4 +107,28 @@ export function useTechStack() {
   }, []);
 
   return { techStack, isLoading, error };
+}
+// Helper functions to validate and convert types
+function validateCategory(category: string): TechStack['category'] {
+  const validCategories: TechStack['category'][] = ["frontend", "backend", "devops", "database", "other"];
+  
+  if (validCategories.includes(category as TechStack['category'])) {
+    return category as TechStack['category'];
+  }
+  
+  // Fallback to "other" if invalid
+  console.warn(`Invalid category: ${category}. Using "other" instead.`);
+  return "other";
+}
+
+function validateProficiency(proficiency: string): TechStack['proficiency'] {
+  const validProficiencies: TechStack['proficiency'][] = ["beginner", "intermediate", "advanced", "expert"];
+  
+  if (validProficiencies.includes(proficiency as TechStack['proficiency'])) {
+    return proficiency as TechStack['proficiency'];
+  }
+  
+  // Fallback to "intermediate" if invalid
+  console.warn(`Invalid proficiency: ${proficiency}. Using "intermediate" instead.`);
+  return "intermediate";
 }

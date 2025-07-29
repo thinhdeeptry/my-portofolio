@@ -38,9 +38,13 @@ export const useComments = () => {
       if (error) throw error;
       
       setComments(data || []);
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error('Error fetching comments:', err);
-      setError(err.message || 'Failed to load comments');
+      if (err instanceof Error) {
+        setError(err.message || 'Failed to load comments');
+      } else {
+        setError('Failed to load comments');
+      }
     } finally {
       setIsLoading(false);
     }
@@ -100,13 +104,14 @@ export const useComments = () => {
         ]);
       
       if (error) throw error;
-      
-      // Tải lại comments sau khi thêm
-      await fetchComments();
       return true;
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error('Error adding comment:', err);
-      setError(err.message || 'Failed to add comment');
+      if (err instanceof Error) {
+        setError(err.message || 'Failed to add comment');
+      } else {
+        setError('Failed to add comment');
+      }
       return false;
     }
   };

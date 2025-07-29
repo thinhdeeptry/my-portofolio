@@ -1,7 +1,6 @@
 import React from 'react';
 import { useProjects } from '@/hooks/useProjects';
 import ProjectCard from './ProjectCard';
-import AnimatedContent from '../AnimatedContent';
 import { motion } from 'framer-motion';
 
 const ProjectsSection: React.FC = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Award, Layers } from 'lucide-react';
+import { Code, Layers } from 'lucide-react';
 
 interface SectionTabsProps {
   activeTab: 'projects' | 'certificates' | 'techstack';

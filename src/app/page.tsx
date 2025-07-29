@@ -1,20 +1,16 @@
 import AnimatedHeading from "@/component/AnimatedHeading";
-import DarkVeil from "@/component/darkVeil";
 import ProfileCardWrapper from "@/component/ProfileCardWrapper";
 import TextType from "@/component/textType";
-import GradientText from "@/component/GradientText";
 import Particles from "@/component/Particles";
 import ScrambledText from "@/component/ScrambledText";
 import { Facebook, Github, Linkedin, Sparkles } from "lucide-react";
 import AnimatedContent from "@/component/AnimatedContent";
 import CurvedLoop from "@/component/CurvedLoop";
-import TargetCursor from "@/component/TargetCursor";
-import Image from "next/image";
-import TiltedCard from "@/component/GlareHover";
 import GlareHover from "@/component/GlareHover";
 import StatsSection from "@/component/StatsSection";
 import PortfolioShowcase from "@/component/portfolio/PortfolioShowcase";
 import ContactMe from "@/component/ContactMe";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -211,7 +207,7 @@ export default function Home() {
                 >
                   <div className="flex-1 w-full self-start">
                     <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-violet-500 text-transparent bg-clip-text">
-                      Hello, I'm
+                      Hello, I&apos;m
                     </h2>
                     <h1 className="text-6xl font-bold text-white mb-8">
                       Nguyễn Đức Thịnh
@@ -227,7 +223,7 @@ export default function Home() {
 
                     <div className="cursor-target bg-gray-900/70 rounded-xl p-6 border border-indigo-500/30 mb-8">
                       <p className="text-indigo-300 italic text-lg">
-                        "Leveraging AI as a professional tool, not a replacement."
+                        &quot;Leveraging AI as a professional tool, not a replacement.&quot;
                       </p>
                     </div>
 
@@ -274,7 +270,7 @@ export default function Home() {
                     className="w-full h-full rounded-full"
                   >
                     <div className="cursor-target rounded-full border-4 border-indigo-500/40 overflow-hidden w-72 h-72 bg-gradient-to-br from-indigo-600/20 to-violet-600/20 p-1">
-                      <img
+                      <Image
                         src={'/avatar.png'}
                         alt="Profile"
                         className="rounded-full object-cover w-full h-full"

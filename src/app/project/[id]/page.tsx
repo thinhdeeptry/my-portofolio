@@ -13,7 +13,7 @@ import AnimatedContent from '@/component/AnimatedContent';
 export default function ProjectDetail() {
   const { id } = useParams();
   const projectId = Array.isArray(id) ? id[0] : id;
-  const { projects, isLoading, error } = useProjects();
+  const { projects, isLoading } = useProjects();
   const { techStack } = useTechStack();  // Lấy danh sách tech stack
   const project = projects.find(p => p.id === projectId);
   
@@ -288,7 +288,7 @@ export default function ProjectDetail() {
         </section>
 
         {/* Additional screenshots */}
-        {project.screenshots?.length > 0 && (
+        {(project.screenshots?.length ?? 0) > 0 && (
           <AnimatedContent
             distance={40}
             direction="vertical"
@@ -304,7 +304,7 @@ export default function ProjectDetail() {
             <section className="container mx-auto px-6 mt-16">
               <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {project.screenshots.map((screenshot, idx) => (
+                {project.screenshots?.map((screenshot, idx) => (
                   <AnimatedContent
                     key={idx}
                     distance={40}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTechStack } from '@/hooks/useProjects';
 import TechCard from './TechCard';
-import AnimatedContent from '../AnimatedContent';
 import { motion } from 'framer-motion';
 
 const TechStackSection: React.FC = () => {

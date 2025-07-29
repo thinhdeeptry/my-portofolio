@@ -3,7 +3,8 @@ import type React from "react"
 import { useState } from "react"
 import { Mail, Send, Github, Linkedin, CheckCircle, AlertCircle, User, MessageSquare, Upload, Pin, Facebook } from "lucide-react"
 import AnimatedContent from "./AnimatedContent"
-import { useComments, type Comment } from "@/hooks/useComments"
+import { useComments} from "@/hooks/useComments"
+import Image from "next/image"
 
 interface FormData {
   name: string
@@ -253,7 +254,7 @@ const ContactMe: React.FC = () => {
               Contact Me
             </h2>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Have a question? Send me a message, and I'll get back to you soon.
+              Have a question? Send me a message, and I&apos;ll get back to you soon.
             </p>
           </div>
         </AnimatedContent>
@@ -280,7 +281,7 @@ const ContactMe: React.FC = () => {
               <div className="bg-gray-900/40 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30">
                 <h3 className="text-2xl font-bold text-white mb-2">Get in Touch</h3>
                 <p className="text-gray-400 mb-8">
-                  Have something to discuss? Send me a message and let's talk.
+                  Have something to discuss? Send me a message and let&apos;s talk.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -527,7 +528,7 @@ const ContactMe: React.FC = () => {
                             >
                               
                               <div className="flex-shrink-0">
-                                <img
+                                <Image
                                   src={comment.avatar_url || "/placeholder.svg?height=40&width=40"}
                                   alt={comment.author}
                                   className="w-10 h-10 rounded-full object-cover"
@@ -556,7 +557,7 @@ const ContactMe: React.FC = () => {
                               className="flex gap-4 p-4 bg-gray-800/30 border border-gray-700/20 rounded-xl hover:bg-gray-800/40 transition-colors duration-200"
                             >
                               <div className="flex-shrink-0">
-                                <img
+                                <Image
                                   src={comment.avatar_url || "/placeholder.svg?height=40&width=40"}
                                   alt={comment.author}
                                   className="w-10 h-10 rounded-full object-cover"

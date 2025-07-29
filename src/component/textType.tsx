@@ -162,6 +162,7 @@ const TextType = ({
 
     return () => clearTimeout(timeout);
   }, [
+    getRandomSpeed,
     currentCharIndex,
     displayedText,
     isDeleting,

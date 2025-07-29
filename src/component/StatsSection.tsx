@@ -6,7 +6,7 @@ import AnimatedContent from './AnimatedContent';
 import { useProjects } from '@/hooks/useProjects';
 
 const StatsSection: React.FC = () => {
-  const { projects, isLoading, error } = useProjects();
+  const { projects } = useProjects();
   return (
     <div className="w-full py-16 bg-gray-950/50">
       <div className="container mx-auto px-8 lg:px-32">

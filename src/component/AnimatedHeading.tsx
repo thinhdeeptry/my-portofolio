@@ -1,6 +1,4 @@
 "use client"
-import { motion } from "framer-motion";
-import { div } from "framer-motion/client";
 import SplitText from "./splitText";
 
 export default function AnimatedHeading() {
