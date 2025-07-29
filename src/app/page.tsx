@@ -149,7 +149,7 @@ export default function Home() {
             </div>
           </div>
           {/* about me */}
-          <div className="w-full overflow-hidden h-auto py-20 bg-gradient-to-b from-gray-900/20 to-black">
+          <div id = "about" className="w-full overflow-hidden h-auto py-20 bg-gradient-to-b from-gray-900/20 to-black">
             <div className="container mx-auto px-8">
               <div className="flex justify-center flex-col items-center">
                 <AnimatedContent

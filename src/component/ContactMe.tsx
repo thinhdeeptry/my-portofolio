@@ -232,7 +232,7 @@ const ContactMe: React.FC = () => {
 
   return (
     <section className="w-full py-20 bg-gradient-to-b from-gray-900/20 to-black">
-      <div className="container mx-auto px-8">
+      <div id="contact" className="container mx-auto px-8">
         {/* Header - giữ nguyên */}
         <AnimatedContent
           distance={100}
