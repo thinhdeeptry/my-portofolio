@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { Project } from '@/types/types';
 
@@ -38,13 +39,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <ExternalLink size={16} />
         </a>
         
-        <a 
-          href={project.detailsUrl} 
+        <Link
+          href={`/project/${project.id}`}
           className="text-gray-300 hover:text-white flex items-center gap-1 transition-colors cursor-target"
         >
           <span>Details</span>
           <ArrowRight size={16} />
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
   {
     "id": "html",
     "name": "HTML",
-    "iconUrl": "/techIcon/html5.svg",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
     "color":"#E34F26",
     "category": "frontend",
     "proficiency": "expert"
@@ -51,6 +51,21 @@
     "id": "nextdotjs",
     "name": "NextJs",
     "iconUrl": "/techIcon/nextdotjs.svg",
+    "color":"#000000",
+    "category": "frontend",
+    "proficiency": "advanced"
+  },{
+    "id": "shadcnui",
+    "name": "Shadcn UI",
+    "iconUrl": "/techIcon/shadcnui.svg",
+    "color":"#000000",
+    "category": "frontend",
+    "proficiency": "advanced"
+  },
+  {
+    "id": "zustand",
+    "name": "Zustand",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/zustand/zustand-original.svg",
     "color":"#000000",
     "category": "frontend",
     "proficiency": "advanced"
@@ -121,7 +136,7 @@
   },
   {
     "id": "kong",
-    "name": "kong",
+    "name": "Kong API Gateway",
     "iconUrl": "/techIcon/kong.svg",
     "color":"#003459",
     "category": "devops",

@@ -3,10 +3,13 @@ export interface Project {
   title: string;
   description: string;
   imageUrl: string;
+  bannerImage?: string; // Ảnh lớn cho trang chi tiết
   liveUrl: string;
-  detailsUrl: string;
-  technologies: string[];
-  featured: boolean;
+  githubUrl: string;
+  detailsUrl: string; // URL dẫn đến trang chi tiết dự án (/project/[id])
+  technologies?: { name: string; icon?: string }[];
+  features?: string[];
+  screenshots?: { url: string; caption?: string }[];
 }
 
 export interface Certificate {

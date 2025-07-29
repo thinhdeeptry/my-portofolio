@@ -4,68 +4,235 @@
     "title": "EduForge - Nền Tảng Học Tập Trực Tuyến Thông Minh",
     "description": "EduForge là một nền tảng học tập trực tuyến tiên tiến, được thiết kế và phát triển như một dự án môn học Kiến trúc và Thiết kế Phần mềm năm 2025. Với mục tiêu mang lại trải nghiệm học tập hiện đại, cá nhân hóa và hiệu quả, EduForge tích hợp các công nghệ tiên tiến và kiến trúc microservices để cung cấp một hệ sinh thái học tập trực tuyến toàn diện, thân thiện với người dùng và thông minh.",
     "imageUrl": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio//home.jpg",
-    "liveUrl": "github.com/thinhdeeptry/edu-forge-frontend",
-    "technologies": {
-      "front_end": [
-        "Next.js 14 (App Router)",
-        "Tailwind CSS",
-        "Shadcn UI",
-        "Zustand"
-      ],
-      "back_end": [
-        "NestJS",
-        "Kong API Gateway",
-        "JWT Authentication"
-      ]
-    },
-    "featured": true
-  },
-  {
-  "id": "Welo",
-  "title": "Welo - Ứng dụng Chat Real-Time Đa Nền Tảng",
-  "description": "Welo là một ứng dụng chat đa nền tảng, được xây dựng để cung cấp trải nghiệm giao tiếp liền mạch và tức thì. Dự án cho phép người dùng nhắn tin cá nhân, trò chuyện nhóm, và thực hiện các cuộc gọi video/âm thanh chất lượng cao nhờ vào việc sử dụng WebSocket với Socket.IO và tích hợp Daily.co API. Welo không chỉ là một sản phẩm hoàn chỉnh mà còn là minh chứng cho khả năng xây dựng và triển khai một ứng dụng Full-Stack phức tạp, có khả năng mở rộng.",
-  "imageUrl": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/welo.png",
-  "liveUrl": "github.com/thinhdeeptry/welo-app-chat",
-  "technologies": {
-    "front_end": [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Zustand",
-      "Daily.co API"
+    "bannerImage": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio//home.jpg",
+    "liveUrl": "eduforge.io.vn",
+    "githubUrl": "https://github.com/thinhdeeptry/edu-forge-frontend",
+    "featured": true,
+    "technologies": [
+      {
+        "name": "NextJs"
+      },
+      {
+        "name": "Tailwind CSS"
+      },
+      {
+        "name": "Shadcn UI"
+      },
+      {
+        "name": "Zustand"
+      },
+      {
+        "name": "NestJs"
+      },
+      {
+        "name": "Kong API Gateway"
+      },
+      {
+        "name": "JWT Authentication"
+      }
     ],
-    "back_end": [
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Mongoose",
-      "Socket.IO",
-      "Docker"
+    "features": [
+      "Hệ thống khóa học với video bài giảng, bài tập và kiểm tra tương tác",
+      "Nền tảng forum học tập cho phép sinh viên và giảng viên tương tác",
+      "Học liệu được cá nhân hóa dựa trên phong cách học tập của từng người",
+      "Tích hợp AI để đề xuất nội dung học tập phù hợp với từng học viên",
+      "Giao diện thân thiện với người dùng, tương thích đa nền tảng"
+    ],
+    "screenshots": [
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio//home.jpg",
+        "caption": "Trang chủ - EduForge"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio//lessondetail.jpg",
+        "caption": "Giao Diện Bài Học"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio//lessondetail2.jpg",
+        "caption": "Giao Diện Bài Học"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio//category.jpg",
+        "caption": "Phân Loại Khóa Học Theo Danh Mục"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio//coursedetail.jpg",
+        "caption": "Chi Tiết Khóa Học"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio//addcourse.jpg",
+        "caption": "Thêm Khóa Học Mới"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/eduforge/assessment.jpg",
+        "caption": "Giao Diện Bài Tập"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/eduforge/assessment1.jpg",
+        "caption": "Chi Tiết Bài Tập"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/eduforge/certui.jpg",
+        "caption": "Chứng Chỉ Hoàn Thành Khóa Học"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/eduforge/comment.jpg",
+        "caption": "Hệ Thống Bình Luận"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/eduforge/post.jpg",
+        "caption": "Bài Viết Cộng Đồng"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/eduforge/post2.jpg",
+        "caption": "Quản Lý Bài Viết"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/eduforge/post4.jpg",
+        "caption": "Tạo Bài Viết Mới"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/eduforge/ai.jpg",
+        "caption": "Giao Diện AI Hỗ Trợ Học Tập"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/eduforge/aireport.jpg",
+        "caption": "Báo Cáo Phân Tích AI"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/eduforge/login.jpg",
+        "caption": "Đăng Nhập Hệ Thống"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/eduforge/user.jpg",
+        "caption": "Quản Lý Thông Tin Người Dùng"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/eduforge/paymentui.jpg",
+        "caption": "Giao Diện Thanh Toán"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/eduforge/report2.jpg",
+        "caption": "Báo Cáo Doanh Thu"
+      }
     ]
   },
-  "featured": true
-},
   {
-  "id": "Portfolio",
-  "title": "Website Portfolio Cá Nhân",
-  "description": "Đây là trang web portfolio cá nhân của tôi, được xây dựng từ đầu để giới thiệu các dự án, kỹ năng và kinh nghiệm của bản thân. Trang web được phát triển bằng Next.js, mang lại hiệu suất cao và tối ưu SEO. Ngoài ra, dự án còn tích hợp chức năng bình luận/guestbook sử dụng Supabase làm back-end, cho phép khách truy cập để lại lời nhắn. Toàn bộ dự án được triển khai trên nền tảng Vercel, đảm bảo tốc độ và sự ổn định.",
-  "imageUrl": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio//portfolio.png",
-  "liveUrl": "https://thinh-dev-portfolio.vercel.app/",
-  "technologies": {
-    "front_end": [
-      "Next.js 14 (App Router)",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Shadcn UI",
-      "Zustand"
+    "id": "Portfolio",
+    "title": "Website Portfolio Cá Nhân",
+    "description": "Đây là trang web portfolio cá nhân của tôi, được xây dựng từ đầu để giới thiệu các dự án, kỹ năng và kinh nghiệm của bản thân. Trang web được phát triển bằng Next.js, mang lại hiệu suất cao và tối ưu SEO. Ngoài ra, dự án còn tích hợp chức năng bình luận/guestbook sử dụng Supabase làm back-end, cho phép khách truy cập để lại lời nhắn. Toàn bộ dự án được triển khai trên nền tảng Vercel, đảm bảo tốc độ và sự ổn định.",
+    "imageUrl": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio//portfolio.png",
+    "bannerImage": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio//portfolio.png",
+    "liveUrl": "https://thinh-dev-portfolio.vercel.app/",
+    "githubUrl": "https://github.com/thinhdeeptry/portfolio",
+    "featured": true,
+    "technologies": [
+      {
+        "name": "Next.js 14 (App Router)"
+      },
+      {
+        "name": "Tailwind CSS"
+      },
+      {
+        "name": "Framer Motion"
+      },
+      {
+        "name": "Shadcn UI"
+      },
+      {
+        "name": "Zustand"
+      },
+      {
+        "name": "Supabase (Database)"
+      },
+      {
+        "name": "Supabase (Storage)"
+      },
+      {
+        "name": "Supabase (Auth)"
+      },
+      {
+        "name": "Vercel (Deployment)"
+      }
     ],
-    "back_end": [
-      "Supabase (Database)",
-      "Supabase (Storage)",
-      "Supabase (Auth)",
-      "Vercel (Deployment)"
+    "features": [
+      "Thiết kế hiện đại, responsive với animation mượt mà",
+      "Trình bày dự án với các hình ảnh và mô tả chi tiết",
+      "Guestbook cho phép khách truy cập để lại lời nhắn",
+      "Dark mode và light mode tùy chỉnh",
+      "Tích hợp Supabase để lưu trữ dữ liệu và xác thực"
+    ],
+    "screenshots": [
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio//portfolio.png",
+        "caption": "Trang chủ - Portfolio"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio//portfolio.png",
+        "caption": "Phần dự án - Portfolio"
+      }
     ]
   },
-  "featured": true
-}
+  {
+    "id": "Welo",
+    "title": "Welo - Ứng dụng Chat Real-Time Đa Nền Tảng",
+    "description": "Welo là một ứng dụng chat đa nền tảng, được xây dựng để cung cấp trải nghiệm giao tiếp liền mạch và tức thì. Dự án cho phép người dùng nhắn tin cá nhân, trò chuyện nhóm, và thực hiện các cuộc gọi video/âm thanh chất lượng cao nhờ vào việc sử dụng WebSocket với Socket.IO và tích hợp Daily.co API. Welo không chỉ là một sản phẩm hoàn chỉnh mà còn là minh chứng cho khả năng xây dựng và triển khai một ứng dụng Full-Stack phức tạp, có khả năng mở rộng.",
+    "imageUrl": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/welo.png",
+    "bannerImage": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/welo.png",
+    "liveUrl": "https://github.com/thinhdeeptry/welo-app-chat",
+    "githubUrl": "https://github.com/thinhdeeptry/welo-app-chat",
+    "featured": true,
+    "technologies": [
+      {
+        "name": "NextJs"
+      },
+      {
+        "name": "TypeScript"
+      },
+      {
+        "name": "Tailwind CSS"
+      },
+      {
+        "name": "Zustand"
+      },
+      {
+        "name": "Daily.co API"
+      },
+      {
+        "name": "NodeJs"
+      },
+      {
+        "name": "ExpressJs"
+      },
+      {
+        "name": "MongoDB"
+      },
+      {
+        "name": "Mongoose"
+      },
+      {
+        "name": "Socket.IO"
+      },
+      {
+        "name": "Docker"
+      }
+    ],
+    "features": [
+      "Nhắn tin cá nhân và trò chuyện nhóm với cập nhật real-time",
+      "Cuộc gọi video/âm thanh chất lượng cao qua Daily.co API",
+      "Chia sẻ file/hình ảnh với khả năng lưu trữ an toàn",
+      "Giao diện người dùng trực quan và dễ sử dụng",
+      "Hỗ trợ đa nền tảng: web, mobile"
+    ],
+    "screenshots": [
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/welo.png",
+        "caption": "Giao diện chat chính - Welo"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/welo.png",
+        "caption": "Cuộc gọi video - Welo"
+      }
+    ]
+  }
 ]
