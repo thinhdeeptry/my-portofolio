@@ -287,7 +287,7 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
   }, [items, activeIndex]); // Chạy lại khi items hoặc activeIndex thay đổi
 
   // Thêm hàm debounce để tối ưu hiệu suất
-  function debounce<T extends (...args: any[]) => any>(
+  function debounce<T extends (...args: unknown[]) => unknown>(
     func: T,
     wait: number
   ): (...args: Parameters<T>) => void {
