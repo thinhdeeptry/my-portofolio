@@ -149,9 +149,6 @@
         "name": "Supabase (Storage)"
       },
       {
-        "name": "Supabase (Auth)"
-      },
-      {
         "name": "Vercel (Deployment)"
       }
     ],
@@ -159,8 +156,7 @@
       "Thiết kế hiện đại, responsive với animation mượt mà",
       "Trình bày dự án với các hình ảnh và mô tả chi tiết",
       "Guestbook cho phép khách truy cập để lại lời nhắn",
-      "Dark mode và light mode tùy chỉnh",
-      "Tích hợp Supabase để lưu trữ dữ liệu và xác thực"
+      "Tích hợp Supabase để lưu trữ dữ liệu"
     ],
     "screenshots": [
       {
@@ -177,8 +173,8 @@
     "id": "Welo",
     "title": "Welo - Ứng dụng Chat Real-Time Đa Nền Tảng",
     "description": "Welo là một ứng dụng chat đa nền tảng, được xây dựng để cung cấp trải nghiệm giao tiếp liền mạch và tức thì. Dự án cho phép người dùng nhắn tin cá nhân, trò chuyện nhóm, và thực hiện các cuộc gọi video/âm thanh chất lượng cao nhờ vào việc sử dụng WebSocket với Socket.IO và tích hợp Daily.co API. Welo không chỉ là một sản phẩm hoàn chỉnh mà còn là minh chứng cho khả năng xây dựng và triển khai một ứng dụng Full-Stack phức tạp, có khả năng mở rộng.",
-    "imageUrl": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/welo.png",
-    "bannerImage": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/welo.png",
+    "imageUrl": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/welo/chatnhom.png",
+    "bannerImage": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/welo/chatnhom.png",
     "liveUrl": "https://github.com/thinhdeeptry/welo-app-chat",
     "githubUrl": "https://github.com/thinhdeeptry/welo-app-chat",
     "featured": true,
@@ -226,12 +222,12 @@
     ],
     "screenshots": [
       {
-        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/welo.png",
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/welo/chatdon.png",
         "caption": "Giao diện chat chính - Welo"
       },
       {
-        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/welo.png",
-        "caption": "Cuộc gọi video - Welo"
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/welo/profile.png",
+        "caption": "profile"
       }
     ]
   }

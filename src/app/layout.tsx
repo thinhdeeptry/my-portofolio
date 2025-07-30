@@ -36,8 +36,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Header với positioning tốt hơn */}
-        <header className="fixed top-0 left-0 w-full z-50">
+        <header className="fixed top-0 left-0 w-full z-50 hidden md:block">
           <GooeyNav
             items={navItems}
             particleCount={15}
