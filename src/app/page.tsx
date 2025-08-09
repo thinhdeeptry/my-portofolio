@@ -271,8 +271,8 @@ export default function Home() {
                     >
                       <div className="cursor-target rounded-full border-4 border-indigo-500/40 overflow-hidden w-72 h-72 bg-gradient-to-br from-indigo-600/20 to-violet-600/20 p-1">
                         <Image
-                          width={30}
-                          height={500}
+                          width={288}
+                          height={288}
                           src={'/avatar.png'}
                           alt="Profile"
                           className="rounded-full object-cover w-full h-full"
