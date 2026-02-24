@@ -1,5 +1,93 @@
 [
   {
+    "id": "CogniStream",
+    "title": "CogniStream - Hệ Thống LMS Thông Minh Tích Hợp AI Context-Aware",
+    "description": "CogniStream là đồ án tốt nghiệp chuyên ngành Kỹ thuật phần mềm, giải quyết bài toán cá nhân hóa trong giáo dục trực tuyến. Hệ thống không chỉ là một LMS thông thường mà còn tích hợp Trợ lý ảo AI có khả năng 'nhận thức ngữ cảnh' (Context-Aware), tự động phân tích nội dung bài học để giải đáp thắc mắc cho học viên theo thời gian thực. Được xây dựng trên nền tảng công nghệ mới nhất (Next.js 15, NestJS 11), dự án đảm bảo hiệu năng vượt trội, bảo mật cao với Cloudflare Tunnel và quy trình nghiệp vụ chặt chẽ từ thanh toán VNPAY đến lớp học ảo Google Meet.",
+    "imageUrl": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/cognistream/home.jpg",
+    "bannerImage": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/cognistream/banner.jpg",
+    "liveUrl": "https://cognistream.id.vn",
+    "githubUrl": "https://github.com/thinhdeeptry/cogni-stream-frontend",
+    "featured": true,
+    "technologies": [
+      {
+        "name": "Next.js 15 (SSR)"
+      },
+      {
+        "name": "NestJS 11"
+      },
+      {
+        "name": "Gemini AI API (Flash 2.0)"
+      },
+      {
+        "name": "PostgreSQL & Prisma"
+      },
+      {
+        "name": "Redis (Queue & Cache)"
+      },
+      {
+        "name": "Docker & Cloudflare Tunnel"
+      },
+      {
+        "name": "VNPAY Payment"
+      },
+      {
+        "name": "Google Meet API"
+      },
+      {
+        "name": "Socket.IO"
+      }
+    ],
+    "features": [
+      "Trợ lý AI nhận thức ngữ cảnh (Context-Aware): Hiểu nội dung video/bài đọc để trả lời chính xác",
+      "Hệ thống thanh toán VNPAY tích hợp tự động tính toán hoa hồng (Commission) cho giảng viên",
+      "Lớp học trực tuyến (Live Class) tích hợp Google Meet và điểm danh tự động",
+      "Trình biên tập khóa học kéo thả (Drag & Drop) và cấu hình Quiz nâng cao",
+      "Hiệu năng tải trang cực nhanh (656ms) và bảo mật IP gốc qua Cloudflare Tunnel"
+    ],
+    "screenshots": [
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/cognistream/home.jpg",
+        "caption": "Trang Chủ - CogniStream"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/cognistream/learning-ai.jpg",
+        "caption": "Giao Diện Học Tập Với Trợ Lý AI"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/cognistream/course-detail.jpg",
+        "caption": "Chi Tiết Khóa Học & Lộ Trình"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/cognistream/instructor-dashboard.jpg",
+        "caption": "Dashboard Giảng Viên & Doanh Thu"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/cognistream/course-builder.jpg",
+        "caption": "Trình Biên Tập Khóa Học Kéo Thả"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/cognistream/quiz-config.jpg",
+        "caption": "Cấu Hình Bài Tập Nâng Cao"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/cognistream/admin-approval.jpg",
+        "caption": "Admin: Xét Duyệt Giảng Viên & Nội Dung"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/cognistream/payment-vnpay.jpg",
+        "caption": "Cổng Thanh Toán VNPAY"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/cognistream/live-class.jpg",
+        "caption": "Lớp Học Trực Tuyến Google Meet"
+      },
+      {
+        "url": "https://bihrzjtycfafzdasicag.supabase.co/storage/v1/object/public/avatar-portfolio/cognistream/certificate.jpg",
+        "caption": "Chứng Chỉ Hoàn Thành Khóa Học"
+      }
+    ]
+  },
+  {
     "id": "EduForge",
     "title": "EduForge - Nền Tảng Học Tập Trực Tuyến Thông Minh",
     "description": "EduForge là một nền tảng học tập trực tuyến tiên tiến, được thiết kế và phát triển như một dự án môn học Kiến trúc và Thiết kế Phần mềm năm 2025. Với mục tiêu mang lại trải nghiệm học tập hiện đại, cá nhân hóa và hiệu quả, EduForge tích hợp các công nghệ tiên tiến và kiến trúc microservices để cung cấp một hệ sinh thái học tập trực tuyến toàn diện, thân thiện với người dùng và thông minh.",
